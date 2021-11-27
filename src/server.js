@@ -27,7 +27,7 @@ app.use("/api/tweet", tweetRouter);
 export const start = async () => {
   try {
     await connect();
-    app.listen(config.port, () => {
+    app.listen(process.env.PORT || 3000), () => {
       console.log(`API on http://localhost:3000/api`);
     });
   } catch (e) {
