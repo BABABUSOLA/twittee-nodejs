@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel src --out-dir dist",
     "dev": "nodemon --exec npm run restart",
+    "prod": "web npm start",
     "restart": "rimraf dist && npm run build && npm run start",
     "start": "node dist/index.js"
   },
